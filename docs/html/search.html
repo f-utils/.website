@@ -12,13 +12,13 @@
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
   
-    <title>Index | f-utils  documentation</title>
-    <meta property="og:title" content="Index | f-utils  documentation" />
-    <meta name="twitter:title" content="Index | f-utils  documentation" />
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=c309799c" />
+    <title>Search | f-utils  documentation</title>
+    <meta property="og:title" content="Search | f-utils  documentation" />
+    <meta name="twitter:title" content="Search | f-utils  documentation" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=98401f0d" />
       <link rel="stylesheet" type="text/css" href="_static/theme.css?v=42baaae4" />
-        <link rel="search" title="Search" href="search.html" />
-        <link rel="index" title="Index" href="#" />
+        <link rel="search" title="Search" href="#" />
+        <link rel="index" title="Index" href="genindex.html" />
 
     <script>
     <!-- Prevent Flash of wrong theme -->
@@ -40,7 +40,11 @@
   class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
     <div class="hidden mr-4 md:flex">
       <a href="index.html" class="flex items-center mr-6"><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">f-utils  documentation</span>
-      </a></div><button
+      </a><nav class="flex items-center space-x-6 text-sm font-medium">
+        <a href="/about.html" class="transition-colors hover:text-foreground/80 text-foreground/60">about</a>
+        <a href="/docs.html" class="transition-colors hover:text-foreground/80 text-foreground/60">docs</a>
+        <a href="/libs.html" class="transition-colors hover:text-foreground/80 text-foreground/60">libs</a>
+      </nav></div><button
       class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden"
       type="button" @click="showSidebar = true">
       <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 96 960 960" aria-hidden="true"
@@ -52,7 +56,7 @@
     </button>
     <div class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end">
       <div class="flex-1 w-full md:w-auto md:flex-none"><form id="searchbox"
-      action="search.html"
+      action="#"
       method="get"
       class="relative flex items-center group"
       @keydown.k.window.meta="$refs.search.focus()">
@@ -70,6 +74,13 @@
 </form>
       </div>
       <nav class="flex items-center space-x-1">
+        <a href="https://github.com/f-utils" title="Visit github" rel="noopener nofollow">
+          <div
+            class="inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md disabled:opacity-50 disabled:pointer-events-none hover:bg-accent hover:text-accent-foreground h-9 w-9">
+            _static/github.svg
+          </div>
+        </a>
+        
         <button @click="darkMode = darkMode === 'light' ? 'dark' : 'light'"
           class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9"
           type="button"
@@ -98,7 +109,11 @@
     </a>
 
     <div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
-      <div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
+      <div class="overflow-y-auto h-full w-full relative pr-6"><nav class="flex md:hidden flex-col font-medium mt-4">
+  <a href="/about.html">about</a>
+  <a href="/docs.html">docs</a>
+  <a href="/libs.html">libs</a>
+</nav><nav class="table w-full min-w-full my-6 lg:my-8">
   
 </nav>
       </div>
@@ -113,7 +128,7 @@
     </button>
   </aside>
         <main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
-<div class="w-full min-w-0 mx-auto">
+  <div class="w-full min-w-0 mx-auto">
 <nav aria-label="breadcrumbs"
      class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground">
   <a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground"
@@ -132,19 +147,15 @@
   </a>
   
 <div class="mr-1">/</div><span aria-current="page"
-        class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">Index</span>
+        class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">Search</span>
 </nav>
+    <div id="content" role="main">
+      <div id="fallback" class="my-8 text-sm text-red-700">
+        <script>document.querySelector("#fallback").style.display = "none"</script>Please activate Javascript to enable searching the documentation.</div>
+      <div id="search-results"></div>
+    </div>
+  </div>
 
-<div id="content" role="main">
-
-  <h1 id="index">Index</h1>
-
-</div></div>
-<aside id="right-sidebar" class="hidden text-sm xl:block">
-<div class="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-6 space-y-2">
-
-</div>
-</aside>
         </main>
       </div>
     </div><footer class="py-6 border-t border-border md:py-0">
@@ -158,10 +169,15 @@
 </footer>
   </div>
   
+  
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script defer="defer" src="_static/theme.js?v=073f68d9"></script>
   
+  <script src="_static/searchtools.js" defer></script>
+  <script src="_static/language_data.js" defer></script>
+  <script src="searchindex.js" defer></script>
+
 </body>
 </html>
