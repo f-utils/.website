@@ -1,4 +1,13 @@
-# f-utils
-
-`f-utils` is a Python framework focused in provided type safety and universal constructions.
+```bash
+  /$$$$$$                  /$$     /$$ /$$
+ /$$__  $$                | $$    |__/| $$
+| $$  \__/     /$$   /$$ /$$$$$$   /$$| $$  /$$$$$$$
+| $$$$ /$$$$$$| $$  | $$|_  $$_/  | $$| $$ /$$_____/
+| $$_/|______/| $$  | $$  | $$    | $$| $$|  $$$$$$
+| $$          | $$  | $$  | $$ /$$| $$| $$ \____  $$
+| $$          |  $$$$$$/  |  $$$$/| $$| $$ /$$$$$$$/
+|__/           \______/    \___/  |__/|__/|_______/
+```
+<br>
+A Python framework focused in providing type safety and universal constructions.
 
