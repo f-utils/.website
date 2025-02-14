@@ -2,10 +2,10 @@ from dataclasses import asdict
 from sphinxawesome_theme import ThemeOptions
 
 project = 'f-utils'
-copyright = '2025, Yuri Ximenes'
-author = 'Yuri Ximenes'
+copyright = '2025, f-utils'
+author = 'f-utils colabs'
 
-extensions = []
+extensions = ['myst_parser']
 
 templates_path = ['_templates']
 exclude_patterns = []

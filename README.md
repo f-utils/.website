@@ -6,8 +6,8 @@ This is the repository of `f-utils` webpage, made with [sphinx](https://www.sphi
 
 ```
 .website/
-  |-- source/ ............. .rst files and conf.py
-  `-- build/ .............. generated static files
+  |-- src/ ............... .rst files and conf.py
+  `-- dist/ .............. generated static files
 ```
 
 # Install
@@ -21,9 +21,6 @@ This is the repository of `f-utils` webpage, made with [sphinx](https://www.sphi
 1. Activate the `.venv`
 2. Execute `make html`.
 
-# Contributing
+# Flow
 
-1. Create a new branch.
-2. Make some changes.
-3. Build the website.
-4. Push the changes.
+While pushing to the `main` the runner make the build and update the `gh-pages` branch with `dist/html`, which is displayed with Github Pages.
