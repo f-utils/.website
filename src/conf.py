@@ -34,7 +34,7 @@ html_context = {
             'title': 'docs',
             'links': [
                 {'name': 'philosophy', 'url': 'docs/philosophy'},
-                {'name': 'concepts', 'url': 'docs/concepts'},
+                {'name': 'systematics', 'url': 'docs/systematics'},
                 {'name': 'install', 'url': 'docs/install'}
             ]
         },
