@@ -3,3 +3,5 @@ sphinxawesome_theme
 myst-parser
 git+https://github.com/ximenesyuri/changelog
 pytz
+python-dotenv
+requests
