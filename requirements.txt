@@ -1,3 +1,4 @@
 sphinx
 sphinxawesome_theme
 myst-parser
+git+https://github.com/ximenesyuri/changelog

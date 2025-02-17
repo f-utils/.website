@@ -5,7 +5,7 @@ project = 'f-utils'
 copyright = '2025, f-utils'
 author = 'f-utils colabs'
 
-extensions = ['myst_parser']
+extensions = ['myst_parser', 'changelog']
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -59,6 +59,10 @@ theme_options = ThemeOptions(
             icon=svg_github,
             link='https://github.com/f-utils'
         )
+    },
+    main_nav_links={
+        "home": "index",
+        "changelog": "changelog"
     },
     awesome_headerlinks=True,
     show_prev_next=True
