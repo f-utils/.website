@@ -41,9 +41,9 @@ html_context = {
         'libs': {
             'title': 'libs',
             'links': [
-                {'name': 'f', 'url': 'libs/f/index'},
-                {'name': 'f-core', 'url': 'libs/f-core/index'},
-                {'name': 'f-tools', 'url': 'libs/f-tools/index'}
+                {'name': 'f', 'url': 'libs/f'},
+                {'name': 'f-core', 'url': 'libs/f-core'},
+                {'name': 'f-tools', 'url': 'libs/f-tools'}
             ]
         }
     }
