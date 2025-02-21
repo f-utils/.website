@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 
-<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" data-content_root="../" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
+<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" data-content_root="../../" lang="en" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
 <head>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta charset="utf-8"/>
 <meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
 <meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>systematics | f-utils</title>
-<meta content="systematics | f-utils" property="og:title"/>
-<meta content="systematics | f-utils" name="twitter:title"/>
-<link href="../_static/pygments.css?v=98401f0d" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=3cfa24ea" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=3cfa24ea" rel="stylesheet" type="text/css"/>
-<link href="../_static/logo.svg" rel="icon"/>
-<link href="../search.html" rel="search" title="Search"/>
-<link href="../genindex.html" rel="index" title="Index"/>
+<title>&lt;no title&gt; | f-utils</title>
+<meta content="&lt;no title&gt; | f-utils" property="og:title"/>
+<meta content="&lt;no title&gt; | f-utils" name="twitter:title"/>
+<link href="../../_static/pygments.css?v=98401f0d" rel="stylesheet" type="text/css"/>
+<link href="../../_static/theme.css?v=3cfa24ea" rel="stylesheet" type="text/css"/>
+<link href="../../_static/theme.css?v=3cfa24ea" rel="stylesheet" type="text/css"/>
+<link href="../../_static/logo.svg" rel="icon"/>
+<link href="../../search.html" rel="search" title="Search"/>
+<link href="../../genindex.html" rel="index" title="Index"/>
 <script>
     <!-- Prevent Flash of wrong theme -->
       const userPreference = localStorage.getItem('darkMode');
@@ -34,11 +34,11 @@
       Skip to content
     </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
 <div class="hidden mr-4 md:flex">
-<a class="flex items-center mr-6" href="../index.html">
-<img alt="Logo" class="mr-2 dark:invert" height="24" src="../_static/logo.svg" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">f-utils</span>
+<a class="flex items-center mr-6" href="../../index.html">
+<img alt="Logo" class="mr-2 dark:invert" height="24" src="../../_static/logo.svg" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">f-utils</span>
 </a><nav class="flex items-center space-x-6 text-sm font-medium">
-<a class="transition-colors hover:text-foreground/80 text-foreground/60" href="../index.html">home</a>
-<a class="transition-colors hover:text-foreground/80 text-foreground/60" href="../changelog.html">changelog</a>
+<a class="transition-colors hover:text-foreground/80 text-foreground/60" href="../../index.html">home</a>
+<a class="transition-colors hover:text-foreground/80 text-foreground/60" href="../../changelog.html">changelog</a>
 </nav></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
 <svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"></path>
@@ -46,7 +46,7 @@
 <span class="sr-only">Toggle navigation menu</span>
 </button>
 <div class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end">
-<div class="flex-1 w-full md:w-auto md:flex-none"><form @keydown.k.window.meta="$refs.search.focus()" action="../search.html" class="relative flex items-center group" id="searchbox" method="get">
+<div class="flex-1 w-full md:w-auto md:flex-none"><form @keydown.k.window.meta="$refs.search.focus()" action="../../search.html" class="relative flex items-center group" id="searchbox" method="get">
 <input aria-label="Search the docs" class="inline-flex items-center font-medium transition-colors bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background border border-input hover:bg-accent focus:bg-accent hover:text-accent-foreground focus:text-accent-foreground hover:placeholder-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64" id="search-input" name="q" placeholder="Search ..." type="search" x-ref="search"/>
 <kbd class="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none text-muted-foreground items-center gap-1 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex group-hover:bg-accent group-hover:text-accent-foreground">
 <span class="text-xs">⌘</span>
@@ -78,31 +78,31 @@
 </div>
 </header>
 <div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }" class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full overflow-y-auto border-r border-border md:sticky" id="left-sidebar">
-<div class="flex md:hidden justify-start text-sm bg-background" href="../index.html">
-<img alt="Logo" class="mr-2 dark:invert" height="16" src="../_static/logo.svg" width="16"/>
+<div class="flex md:hidden justify-start text-sm bg-background" href="../../index.html">
+<img alt="Logo" class="mr-2 dark:invert" height="16" src="../../_static/logo.svg" width="16"/>
 <span class="font-bold text-clip whitespace-nowrap">f-utils</span>
 </div>
 <nav>
 <ul class="mt-6 space-y-6 text-left p-0">
 <li class="font-bold" style="margin-top: 35px;">docs</li>
 <ul class="space-y-2 mt-2 ml-4 p-0">
-<li><a class="hover:underline" href="philosophy.html">philosophy</a></li>
-<li><a class="hover:underline" href="#">systematics</a></li>
-<li><a class="hover:underline" href="structure.html">structure</a></li>
-<li><a class="hover:underline" href="install.html">install</a></li>
+<li><a class="hover:underline" href="../../docs/philosophy.html">philosophy</a></li>
+<li><a class="hover:underline" href="../../docs/systematics.html">systematics</a></li>
+<li><a class="hover:underline" href="../../docs/structure.html">structure</a></li>
+<li><a class="hover:underline" href="../../docs/install.html">install</a></li>
 </ul>
 <li class="font-bold" style="margin-top: 35px;">libs</li>
 <ul class="space-y-2 mt-2 ml-4 p-0">
-<li><a class="hover:underline" href="../libs/primitive/index.html">primitive</a></li>
-<li><a class="hover:underline" href="../libs/primary/index.html">primary</a></li>
-<li><a class="hover:underline" href="../libs/other/index.html">other</a></li>
+<li><a class="hover:underline" href="../primitive/index.html">primitive</a></li>
+<li><a class="hover:underline" href="../primary/index.html">primary</a></li>
+<li><a class="hover:underline" href="index.html">other</a></li>
 </ul>
 </ul>
 </nav>
 <div class="relative overflow-hidden md:overflow-auto my-4 md:my-0">
 <div class="overflow-y-auto h-full w-full relative pr-6"><nav class="flex md:hidden flex-col font-medium mt-4">
-<a href="../index.html">home</a>
-<a href="../changelog.html">changelog</a>
+<a href="../../index.html">home</a>
+<a href="../../changelog.html">changelog</a>
 </nav><nav class="table w-full min-w-full my-6 lg:my-8">
 </nav>
 </div>
@@ -116,66 +116,17 @@
 <main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
 <div class="w-full min-w-0 mx-auto">
 <nav aria-label="breadcrumbs" class="flex items-center mb-4 space-x-1 text-sm text-muted-foreground">
-<a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground" href="../index.html">
+<a class="overflow-hidden text-ellipsis whitespace-nowrap hover:text-foreground" href="../../index.html">
 <span class="hidden md:inline">f-utils</span>
 <svg aria-label="Home" class="md:hidden" fill="currentColor" height="18" stroke="none" viewbox="0 96 960 960" width="18" xmlns="http://www.w3.org/2000/svg">
 <path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
 </svg>
 </a>
-<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">systematics</span>
+<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">&lt;no title&gt;</span>
 </nav>
 <div id="content" role="main">
-<section id="systematics">
-<h1>systematics<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#systematics"><span>#</span></a></h1>
-<p>Our <a class="reference internal" href="philosophy.html"><span class="doc std std-doc">philosophy</span></a> is realized through a <em>systematics</em>: a collection of practical and systematical steps to be used to build <code class="docutils literal notranslate"><span class="pre">f-systems</span></code>. In this documentation we describe some of the fundamental concepts that subsumes our systematics.</p>
-<section id="overview">
-<h2>overview<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#overview" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#overview'"><span>#</span></a></h2>
-<p>Recall that a <code class="docutils literal notranslate"><span class="pre">f-system</span></code> is a system that uses the <code class="docutils literal notranslate"><span class="pre">f</span></code> library. Every <code class="docutils literal notranslate"><span class="pre">f-system</span></code> have a <code class="docutils literal notranslate"><span class="pre">state</span></code>, which is defined by all information we have on the system in a given moment. These “information” are given by the entities that the system have access in that given moment, hence by their <code class="docutils literal notranslate"><span class="pre">accessible</span> <span class="pre">entities</span></code>.</p>
-<p>In a <code class="docutils literal notranslate"><span class="pre">f-system</span></code> we have four kinds of entities:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">types</span></code>: are the types that can be passed to (or returned by) a function;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operations</span></code>: are functions that receive types and return another types, i.e., are ways to build new types from given ones;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spectra</span></code>: are the “generic functions”, which implements parametric polymorphisms, hence that can be applied to different types;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dynamic</span> <span class="pre">spectra</span></code>: are the variations of spectra that deals with <em>variable</em> generic functions, in the sense that they can have a variable number of objects.</p></li>
-</ol>
-<p>The flavored entities that are considered <em>accessible</em> are stored in a corresponding <code class="docutils literal notranslate"><span class="pre">database</span></code> (which is just a dictionary), being then manipulated through <code class="docutils literal notranslate"><span class="pre">structural</span> <span class="pre">methods</span></code> (which are just CRUD operations). Thus, with these <code class="docutils literal notranslate"><span class="pre">structural</span> <span class="pre">methods</span></code> one controls the <code class="docutils literal notranslate"><span class="pre">state</span></code> of a <code class="docutils literal notranslate"><span class="pre">f-system</span></code>.</p>
-</section>
-<section id="structure">
-<h2>structure<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#structure" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#structure'"><span>#</span></a></h2>
-<p>The entities splits into two parts:</p>
-<ol class="arabic simple">
-<li><p>metadata</p></li>
-<li><p>specialized data.</p></li>
-</ol>
-<p>The metadata contains:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: which briefly describes the entity</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code>: which classify the entity</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">comments</span></code>: which complement the entity</p></li>
-</ol>
-<p>The specialized data vary from the entity kinds, but, in essence, they define the “body” of the entity, which is the part of an entity which is used to construct other things.</p>
-</section>
-<section id="methods">
-<h2>methods<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#methods" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#methods'"><span>#</span></a></h2>
-<p>After creating a <code class="docutils literal notranslate"><span class="pre">f-system</span></code>, the first step is to <em>initialize</em> a <code class="docutils literal notranslate"><span class="pre">database</span></code> for the specific kind of entity we will use. This is done through the method <code class="docutils literal notranslate"><span class="pre">database()</span></code>. One can then <em>initialize</em> an entity in the database, which is done through the method <code class="docutils literal notranslate"><span class="pre">init()</span></code>, that creates an entity with a minimum of metadata and with an “empty body”.</p>
-<p>In the sequence, one can <em>extend</em> the “body” of an entity, or add some additional metadata to it. This is done via the methods <code class="docutils literal notranslate"><span class="pre">extend()</span></code> and <code class="docutils literal notranslate"><span class="pre">add()</span></code>, respectively. Some metadata can then be <em>deleted</em> with the <code class="docutils literal notranslate"><span class="pre">delete()</span></code>. Finally, at some moment one can <em>update</em> some data with <code class="docutils literal notranslate"><span class="pre">update()</span></code> method.</p>
-</section>
-<section id="accessibility">
-<h2>accessibility<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#accessibility" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#accessibility'"><span>#</span></a></h2>
-<p>Recall that a principle of the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> is <em>accessibility</em>, which means that the entities of a <code class="docutils literal notranslate"><span class="pre">f-system</span></code> should be quickly accessed and must provide human readable info. This is implemented through additional methods <code class="docutils literal notranslate"><span class="pre">get()</span></code>, <code class="docutils literal notranslate"><span class="pre">search()</span></code> and <code class="docutils literal notranslate"><span class="pre">info()</span></code>. The first one allows us to get data from a given entity. The second one allows us to find a entity inside its database by providing some search string. Finally, the last one returns a human readable account of a provided entity.</p>
-</section>
-</section>
 </div><div class="flex justify-between items-center pt-6 mt-12 border-t border-border gap-4">
-</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
-<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
-<ul>
-<li><a :data-current="activeSection === '#overview'" class="reference internal" href="#overview">overview</a></li>
-<li><a :data-current="activeSection === '#structure'" class="reference internal" href="#structure">structure</a></li>
-<li><a :data-current="activeSection === '#methods'" class="reference internal" href="#methods">methods</a></li>
-<li><a :data-current="activeSection === '#accessibility'" class="reference internal" href="#accessibility">accessibility</a></li>
-</ul>
-</div>
-</aside>
+</div></div>
 </main>
 </div>
 </div><footer class="py-6 border-t border-border md:py-0">
@@ -186,9 +137,9 @@
 </div>
 </footer>
 </div>
-<script src="../_static/documentation_options.js?v=5929fcd5"></script>
-<script src="../_static/doctools.js?v=9bcbadda"></script>
-<script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-<script defer="defer" src="../_static/theme.js?v=073f68d9"></script>
+<script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+<script src="../../_static/doctools.js?v=9bcbadda"></script>
+<script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+<script defer="defer" src="../../_static/theme.js?v=073f68d9"></script>
 </body>
 </html>

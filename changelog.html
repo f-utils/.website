@@ -11,8 +11,8 @@
 <meta content="changelog | f-utils" property="og:title"/>
 <meta content="changelog | f-utils" name="twitter:title"/>
 <link href="_static/pygments.css?v=98401f0d" rel="stylesheet" type="text/css"/>
-<link href="_static/theme.css?v=b2e70c2c" rel="stylesheet" type="text/css"/>
-<link href="_static/theme.css?v=b2e70c2c" rel="stylesheet" type="text/css"/>
+<link href="_static/theme.css?v=3cfa24ea" rel="stylesheet" type="text/css"/>
+<link href="_static/theme.css?v=3cfa24ea" rel="stylesheet" type="text/css"/>
 <link href="_static/logo.svg" rel="icon"/>
 <link href="search.html" rel="search" title="Search"/>
 <link href="genindex.html" rel="index" title="Index"/>
@@ -55,9 +55,14 @@
 </form>
 </div>
 <nav class="flex items-center space-x-1">
-<a href="https://github.com/f-utils" rel="noopener nofollow" title="Visit Example">
+<a href="https://github.com/f-utils" rel="noopener nofollow" title="Visit github">
 <div class="inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md disabled:opacity-50 disabled:pointer-events-none hover:bg-accent hover:text-accent-foreground h-9 w-9">
 <svg fill="currentColor" height="22px" style="margin-top:-2px;display:inline" viewbox="0 0 45 44" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M22.477.927C10.485.927.76 10.65.76 22.647c0 9.596 6.223 17.736 14.853 20.608 1.087.2 1.483-.47 1.483-1.047 0-.516-.019-1.881-.03-3.693-6.04 1.312-7.315-2.912-7.315-2.912-.988-2.51-2.412-3.178-2.412-3.178-1.972-1.346.149-1.32.149-1.32 2.18.154 3.327 2.24 3.327 2.24 1.937 3.318 5.084 2.36 6.321 1.803.197-1.403.759-2.36 1.379-2.903-4.823-.548-9.894-2.412-9.894-10.734 0-2.37.847-4.31 2.236-5.828-.224-.55-.969-2.759.214-5.748 0 0 1.822-.584 5.972 2.226 1.732-.482 3.59-.722 5.437-.732 1.845.01 3.703.25 5.437.732 4.147-2.81 5.967-2.226 5.967-2.226 1.185 2.99.44 5.198.217 5.748 1.392 1.517 2.232 3.457 2.232 5.828 0 8.344-5.078 10.18-9.916 10.717.779.67 1.474 1.996 1.474 4.021 0 2.904-.027 5.247-.027 5.96 0 .58.392 1.256 1.493 1.044C37.981 40.375 44.2 32.24 44.2 22.647c0-11.996-9.726-21.72-21.722-21.72" fill="currentColor" fill-rule="evenodd"></path></svg>
+</div>
+</a>
+<a href="https://discord.gg/waANUyCUGE" rel="noopener nofollow" title="Visit discord">
+<div class="inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md disabled:opacity-50 disabled:pointer-events-none hover:bg-accent hover:text-accent-foreground h-9 w-9">
+<svg height="18px" style="margin-top:-2px;display:inline" viewbox="0 0 127.14 96.36" xmlns="http://www.w3.org/2000/svg"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" fill="#e1e7ef"></path></svg>
 </div>
 </a>
 <button @click="darkMode = darkMode === 'light' ? 'dark' : 'light'" aria-label="Color theme switcher" class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button">
@@ -83,13 +88,14 @@
 <ul class="space-y-2 mt-2 ml-4 p-0">
 <li><a class="hover:underline" href="docs/philosophy.html">philosophy</a></li>
 <li><a class="hover:underline" href="docs/systematics.html">systematics</a></li>
+<li><a class="hover:underline" href="docs/structure.html">structure</a></li>
 <li><a class="hover:underline" href="docs/install.html">install</a></li>
 </ul>
 <li class="font-bold" style="margin-top: 35px;">libs</li>
 <ul class="space-y-2 mt-2 ml-4 p-0">
-<li><a class="hover:underline" href="libs/f/index.html">f</a></li>
-<li><a class="hover:underline" href="libs/f-core/index.html">f-core</a></li>
-<li><a class="hover:underline" href="libs/f-tools/index.html">f-tools</a></li>
+<li><a class="hover:underline" href="libs/primitive/index.html">primitive</a></li>
+<li><a class="hover:underline" href="libs/primary/index.html">primary</a></li>
+<li><a class="hover:underline" href="libs/other/index.html">other</a></li>
 </ul>
 </ul>
 </nav>
@@ -121,24 +127,34 @@
 <div id="content" role="main">
 <section id="changelog">
 <h1>changelog<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#changelog"><span>#</span></a></h1>
-</section>
+<p>This page contains the changelogs of the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> libs, based on tags generation.</p>
 <section id="f">
-<h1>f<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#f"><span>#</span></a></h1>
-</section>
+<h2>f<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#f" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#f'"><span>#</span></a></h2>
+<h3 class="changelog_title"><a href="https://github.com/f-utils/f/tree/v0.0.0">v0.0.0</a></h3>
+<p class="changelog_entries"><strong>date:</strong> 2025-02-13 at 09:21 -0300</p>
+<p class="changelog_entries"><strong>desc:</strong> fix: fixing dspec.extend</p>
+<p class="changelog_entries"><strong>commits:</strong> <a href="https://github.com/f-utils/f/commit/87363c82ef95954b58868df7c3d3dab9fc8cf179">87363c8</a>, <a href="https://github.com/f-utils/f/commit/a7c1984a4c9eeb08f5dd68a215f7ec0980193bb2">a7c1984</a>, <a href="https://github.com/f-utils/f/commit/cb4a8b7c8bb1d13dc529444909a08be251d30ea8">cb4a8b7</a>, <a href="https://github.com/f-utils/f/commit/68b661314a098bb5dfbcf8263f3fdd6b13f0d683">68b6613</a>, <a href="https://github.com/f-utils/f/commit/887221a3d85a84898349ca5cb16ecbf4887f9f5e">887221a</a>, <a href="https://github.com/f-utils/f/commit/8e6db61bf827c9ab9eae86e65da3add3f7c0aee6">8e6db61</a>, <a href="https://github.com/f-utils/f/commit/b73a72cd96bcde595994a0fdeb92dd96e1412646">b73a72c</a>, <a href="https://github.com/f-utils/f/commit/1f77971e5e8d234c200782c94bf00dc0ed93da61">1f77971</a>, <a href="https://github.com/f-utils/f/commit/b163d2e7808acae2532e92b366b8a9df157e46d2">b163d2e</a>, <a href="https://github.com/f-utils/f/commit/ea343d667b6c3c7b8f53afb1b330906328ccc97a">ea343d6</a>, <a href="https://github.com/f-utils/f/commit/f300bd10ed6f2cf673887959a1d3329f7044d02d">f300bd1</a>, <a href="https://github.com/f-utils/f/commit/86a3c96b1e419a5a679df21484fc6e9d839cb930">86a3c96</a>, <a href="https://github.com/f-utils/f/commit/14f35e500df34edbf5e09b0827047bee00398f83">14f35e5</a>, <a href="https://github.com/f-utils/f/commit/41dcda090bc1f5e6a81e642acaed5b7a872e6b95">41dcda0</a>, <a href="https://github.com/f-utils/f/commit/f3566459907b35c387b0009cf99729c4375d297f">f356645</a>, <a href="https://github.com/f-utils/f/commit/5b73d3667502bff623f8459a2c1797969bc0aa28">5b73d36</a>, <a href="https://github.com/f-utils/f/commit/ecdfd2f97f745c7a9a39ec776590fa14eb492f82">ecdfd2f</a>, <a href="https://github.com/f-utils/f/commit/8e5034e0938b44fafbc7b11179e1fc61b27e422a">8e5034e</a>, <a href="https://github.com/f-utils/f/commit/f584f95cdbd6a55fb2295399a799af3da5e4a97c">f584f95</a>, <a href="https://github.com/f-utils/f/commit/391d286a8e6ac826d188298b11da00e9d40831f1">391d286</a>, <a href="https://github.com/f-utils/f/commit/a7406c59d24988adab05a6ca034b787047fb20d8">a7406c5</a>, <a href="https://github.com/f-utils/f/commit/707484ac339c36ecdf55b2c6caaa35f36aa34ab0">707484a</a>, <a href="https://github.com/f-utils/f/commit/1bf4b23f589a9f2bcb79ae84af197c6f859faa6a">1bf4b23</a>, <a href="https://github.com/f-utils/f/commit/104e8b56f9eecc3b93cc8ce61fffd5d1fa8d7b33">104e8b5</a>, <a href="https://github.com/f-utils/f/commit/cdfd181da6d2c3b3ff3a64483b885167637b327a">cdfd181</a>, <a href="https://github.com/f-utils/f/commit/07086380f788ce0a2cd0372f7893021192286f0b">0708638</a>, <a href="https://github.com/f-utils/f/commit/4325b68aec861a46eec7227c0c95b6259f7e1787">4325b68</a>, <a href="https://github.com/f-utils/f/commit/acca6bb84bbb8ca600194a6549af07d6c24ba184">acca6bb</a>, <a href="https://github.com/f-utils/f/commit/c3bd61b4bf74cbf9becd30d6884b2065ab4a1fed">c3bd61b</a>, <a href="https://github.com/f-utils/f/commit/3ae0f829eb2bc229622b1d17456f2b790696d287">3ae0f82</a></p></section>
 <section id="f-core">
-<h1>f-core<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#f-core"><span>#</span></a></h1>
-</section>
+<h2>f-core<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#f-core" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#f-core'"><span>#</span></a></h2>
+<h3 class="changelog_title"><a href="https://github.com/f-utils/f-core/tree/v0.0.0">v0.0.0</a></h3>
+<p class="changelog_entries"><strong>date:</strong> 2025-02-13 at 14:00 -0300</p>
+<p class="changelog_entries"><strong>desc:</strong> feat: extend 'join' and 'product' dspecs</p>
+<p class="changelog_entries"><strong>commits:</strong> <a href="https://github.com/f-utils/f-core/commit/31053b596e68c78b5daf019199484c6489a08529">31053b5</a>, <a href="https://github.com/f-utils/f-core/commit/206d2bb25f16f05120d3a55970c8645c131eb479">206d2bb</a>, <a href="https://github.com/f-utils/f-core/commit/b3cfc92e8e6df94b1b1f8fe57fe42526090c88df">b3cfc92</a>, <a href="https://github.com/f-utils/f-core/commit/c060f85fd62cb3ec12fdf4bd2eb631bb79815bc6">c060f85</a>, <a href="https://github.com/f-utils/f-core/commit/503a96578c6acd256fdd8419e47dd4ad1e7584f1">503a965</a>, <a href="https://github.com/f-utils/f-core/commit/c0248861df82d9a3d0ea5348980385bab4731f60">c024886</a>, <a href="https://github.com/f-utils/f-core/commit/dc8150729c365c1d86d2bd03f6759638668e276e">dc81507</a>, <a href="https://github.com/f-utils/f-core/commit/6fd4f7e65458f1249affc602d447d2c7781ddae8">6fd4f7e</a>, <a href="https://github.com/f-utils/f-core/commit/d4df00e92cd68e388ff42944f5064505ae35eef4">d4df00e</a>, <a href="https://github.com/f-utils/f-core/commit/624f07b2fbb697fa69810ed9f79bb7450e111640">624f07b</a>, <a href="https://github.com/f-utils/f-core/commit/a8f584b21a847870df32f60de05a391efbab8b9c">a8f584b</a>, <a href="https://github.com/f-utils/f-core/commit/8e598aba93c04c9657948c62d15c0ceea0ca5dd9">8e598ab</a>, <a href="https://github.com/f-utils/f-core/commit/2298d4b7b368d8283c83d46c87a244a67a31a397">2298d4b</a>, <a href="https://github.com/f-utils/f-core/commit/cdf48b4a67361204b058c1607f31afc1b0ae8acd">cdf48b4</a>, <a href="https://github.com/f-utils/f-core/commit/ebf773ff7b50c7380cc597171976192eb197132e">ebf773f</a>, <a href="https://github.com/f-utils/f-core/commit/0282b48e89352262835ad359b89dd00e9a472e26">0282b48</a>, <a href="https://github.com/f-utils/f-core/commit/45558e67feccbcf396f0ba4bfb58257210ee6dec">45558e6</a>, <a href="https://github.com/f-utils/f-core/commit/832aa0ecd7fa964de3a2e4258539b910facc1805">832aa0e</a>, <a href="https://github.com/f-utils/f-core/commit/eddfe25499ea8a4cab2a856885d9aaadb5a28b5d">eddfe25</a>, <a href="https://github.com/f-utils/f-core/commit/c870303737c5be5044dfe6598bde6583ab454ad8">c870303</a>, <a href="https://github.com/f-utils/f-core/commit/56887a7b3c7c84f7dee83f3f1db230dea3071d0f">56887a7</a>, <a href="https://github.com/f-utils/f-core/commit/24c217dc0ef4319cf0bd2df0ef2d11c926761566">24c217d</a>, <a href="https://github.com/f-utils/f-core/commit/ea652348ac8c6df80ff17a0b0e7e0ee61b189959">ea65234</a>, <a href="https://github.com/f-utils/f-core/commit/6868430fe1bb629698345e408b78837053dc93da">6868430</a>, <a href="https://github.com/f-utils/f-core/commit/f6171cf93c9b8491009a7c887397aca391b76766">f6171cf</a>, <a href="https://github.com/f-utils/f-core/commit/3195a57e88fb149e704d67ad9b2d839f80726a23">3195a57</a>, <a href="https://github.com/f-utils/f-core/commit/00024f21e0178b7e8ad2caced8066eb09d5ede4d">00024f2</a>, <a href="https://github.com/f-utils/f-core/commit/f3b236aaecf50c1b0e7500f74b8b5c39a468d562">f3b236a</a>, <a href="https://github.com/f-utils/f-core/commit/15aa940ae46df4445f0d562c71b5fcfdeb3b293c">15aa940</a>, <a href="https://github.com/f-utils/f-core/commit/911b43d1ff9d2c182cdc3126c49ac0b6a6fc709c">911b43d</a></p></section>
 <section id="f-tools">
-<h1>f-tools<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#f-tools"><span>#</span></a></h1>
+<h2>f-tools<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#f-tools" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#f-tools'"><span>#</span></a></h2>
+Error fetching changelog: 404 Client Error: Not Found for url: https://api.github.com/repos/f-utils/f-tools/tags</section>
+<section id="id1">
+<h2><a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#id1" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#id1'"><span>#</span></a></h2>
+</section>
 </section>
 </div><div class="flex justify-between items-center pt-6 mt-12 border-t border-border gap-4">
 </div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
 <div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
 <ul>
-<li></li>
 <li><a :data-current="activeSection === '#f'" class="reference internal" href="#f">f</a></li>
 <li><a :data-current="activeSection === '#f-core'" class="reference internal" href="#f-core">f-core</a></li>
 <li><a :data-current="activeSection === '#f-tools'" class="reference internal" href="#f-tools">f-tools</a></li>
+<li><a :data-current="activeSection === '#id1'" class="reference internal" href="#id1"></a></li>
 </ul>
 </div>
 </aside>
