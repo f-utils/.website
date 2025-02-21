@@ -1,8 +1,8 @@
-# Systematics
+# systematics
 
 Our [philosophy](./philosophy) is realized through a _systematics_: a collection of practical and systematical steps to be used to build `f-systems`. In this documentation we describe some of the fundamental concepts that subsumes our systematics.
 
-## Overview
+## overview
 
 Recall that a `f-system` is a system that uses the `f` library. Every `f-system` have a `state`, which is defined by all information we have on the system in a given moment. These "information" are given by the entities that the system have access in that given moment, hence by their `accessible entities`. 
 
@@ -14,7 +14,7 @@ In a `f-system` we have four kinds of entities:
 
 The flavored entities that are considered _accessible_ are stored in a corresponding `database` (which is just a dictionary), being then manipulated through `structural methods` (which are just CRUD operations). Thus, with these `structural methods` one controls the `state` of a `f-system`.
 
-## Structure
+## structure
 
 The entities splits into two parts:
 1. metadata
@@ -27,12 +27,12 @@ The metadata contains:
 
 The specialized data vary from the entity kinds, but, in essence, they define the "body" of the entity, which is the part of an entity which is used to construct other things.
 
-## Methods
+## methods
 
 After creating a `f-system`, the first step is to _initialize_ a `database` for the specific kind of entity we will use. This is done through the method `database()`. One can then _initialize_ an entity in the database, which is done through the method `init()`, that creates an entity with a minimum of metadata and with an "empty body". 
 
 In the sequence, one can _extend_ the "body" of an entity, or add some additional metadata to it. This is done via the methods `extend()` and `add()`, respectively. Some metadata can then be _deleted_ with the `delete()`. Finally, at some moment one can _update_ some data with `update()` method.
 
-## Accessibility
+## accessibility
 
 Recall that a principle of the `f-utils` is _accessibility_, which means that the entities of a `f-system` should be quickly accessed and must provide human readable info. This is implemented through additional methods `get()`, `search()` and `info()`. The first one allows us to get data from a given entity. The second one allows us to find a entity inside its database by providing some search string. Finally, the last one returns a human readable account of a provided entity.

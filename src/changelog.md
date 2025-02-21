@@ -2,7 +2,7 @@
 
 This page contains the changelogs of the `f-utils` libs, based on tags generation.
 
-# f
+## f
 ```{changelog}
 :repo: github.com/f-utils/f
 :kind: tag
@@ -12,7 +12,7 @@ This page contains the changelogs of the `f-utils` libs, based on tags generatio
 :commits: true
 ```
 
-# f-core
+## f-core
 ```{changelog}
 :repo: github.com/f-utils/f-core
 :kind: tag
@@ -22,7 +22,7 @@ This page contains the changelogs of the `f-utils` libs, based on tags generatio
 :commits: true
 ```
 
-# f-tools
+## f-tools
 ```{changelog}
 :repo: github.com/f-utils/f-tools
 :kind: tag
@@ -31,3 +31,5 @@ This page contains the changelogs of the `f-utils` libs, based on tags generatio
 :desc: true
 :commits: true
 ```
+
+## 

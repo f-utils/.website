@@ -582,7 +582,7 @@ video {
 
 #content ol p,
 #content ol>li {
-    margin-top: 1.5rem
+    margin-top: 0.5rem
 }
 
 #content ol ol {
@@ -980,10 +980,9 @@ code em {
 pre {
     border-color: hsl(var(--border));
     border-radius: var(--radius);
-    border-width: 1px;
+    border-width: 0px;
     font-size: .875rem;
     line-height: 1.25rem;
-    margin-top: 1.5rem;
     overflow-x: auto;
     padding-bottom: 1rem;
     padding-top: 1rem
@@ -2533,7 +2532,6 @@ dt .classifier:before {
 }
 
 .dark\:invert:is(.dark *) {
-    --tw-invert: invert(100%);
     filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 

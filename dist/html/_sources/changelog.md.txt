@@ -1,6 +1,8 @@
 # changelog
 
-# f
+This page contains the changelogs of the `f-utils` libs, based on tags generation.
+
+## f
 ```{changelog}
 :repo: github.com/f-utils/f
 :kind: tag
@@ -10,7 +12,7 @@
 :commits: true
 ```
 
-# f-core
+## f-core
 ```{changelog}
 :repo: github.com/f-utils/f-core
 :kind: tag
@@ -20,7 +22,7 @@
 :commits: true
 ```
 
-# f-tools
+## f-tools
 ```{changelog}
 :repo: github.com/f-utils/f-tools
 :kind: tag
@@ -29,3 +31,5 @@
 :desc: true
 :commits: true
 ```
+
+## 
