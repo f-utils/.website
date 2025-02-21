@@ -18,3 +18,25 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) -v $(O)
+
+install:
+	@if [ ! -d ".venv" ]; then python3 -m venv .venv; fi
+	@. .venv/bin/activate && \
+	pip install -r requirements.txt && \
+	if [ ! -f ".env" ]; then cp .env.local .env; fi && \
+	deactivate
+
+build:
+	@. .venv/bin/activate && \
+	make clean && \
+	make html && \
+	deactivate
+
+run:
+	@. .venv/bin/activate && \
+	make clean && \
+	sphinx-autobuild "$(SOURCEDIR)" "$(BUILDDIR)" & \
+	sleep 3 && \
+	xdg-open http://localhost:8000 && \
+	wait && \
+	deactivate
