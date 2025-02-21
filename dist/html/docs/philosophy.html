@@ -11,8 +11,8 @@
 <meta content="philosophy | f-utils" property="og:title"/>
 <meta content="philosophy | f-utils" name="twitter:title"/>
 <link href="../_static/pygments.css?v=98401f0d" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=3cfa24ea" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=3cfa24ea" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=ea4c2b4f" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=ea4c2b4f" rel="stylesheet" type="text/css"/>
 <link href="../_static/logo.svg" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
@@ -127,9 +127,77 @@
 <div id="content" role="main">
 <section id="philosophy">
 <h1>philosophy<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#philosophy"><span>#</span></a></h1>
+<p>In this documentation we talk about the philosophy that subsumes the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> framework.</p>
+<section id="f-systems">
+<h2>f-systems<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#f-systems" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#f-systems'"><span>#</span></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">f-utils</span></code> is about building <code class="docutils literal notranslate"><span class="pre">f-systems</span></code>. They are formed by <code class="docutils literal notranslate"><span class="pre">entities</span></code>, which are organized into <code class="docutils literal notranslate"><span class="pre">types</span></code>, and relations between them: the <code class="docutils literal notranslate"><span class="pre">constructions</span></code>.</p>
+<p>In the world of software development, one could think of these “entities” as variables that have some “type”. This is the case, for example, of objects of some class. The “constructions” could be viewed as operations that receive entities, manipulate them, and return some other entity, hence as functions in some programming language.</p>
+</section>
+<section id="principles">
+<h2>principles<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#principles" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#principles'"><span>#</span></a></h2>
+<p>In a <code class="docutils literal notranslate"><span class="pre">f-system</span></code>, entities and constructions are subjected to the following principles:</p>
+<ol class="arabic simple">
+<li><p><strong>constructivism</strong>: there are certain <em>primitive</em> entities, from which everything is derived</p></li>
+<li><p><strong>distinguishability</strong>: entities can be easily distinguished one among each other</p></li>
+<li><p><strong>intelligibility</strong>: entities contains intelligible (i.e, human readable) information</p></li>
+<li><p><strong>extensibility</strong>: entities can be modified without affecting the constructions that already used them</p></li>
+<li><p><strong>universality</strong>: constructions are <em>general</em> and can be applied to different contexts</p></li>
+<li><p><strong>type safety</strong>: constructions are parameterized by the type of the involved entities</p></li>
+</ol>
+<p>All those specific principles are guided by a simple general principle:</p>
+<blockquote>
+<div><p><strong>minimalism</strong>: to have only what is <em>really</em> needed.</p>
+</div></blockquote>
+</section>
+<section id="state">
+<h2>state<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#state" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#state'"><span>#</span></a></h2>
+<p>One can give sense to the “extensibility” principle by assuming that:</p>
+<ol class="arabic simple">
+<li><p>the entities have not only a <code class="docutils literal notranslate"><span class="pre">type</span></code>, but also a <code class="docutils literal notranslate"><span class="pre">state</span></code></p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">state</span></code> can be modified</p></li>
+<li><p>a construction depends not only of the <code class="docutils literal notranslate"><span class="pre">type</span></code> of the involved entities (as needed to ensure type safety), but also on their on <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p></li>
+</ol>
+<p>One could then talk about “stateful <code class="docutils literal notranslate"><span class="pre">f-systems</span></code>”.</p>
+<blockquote>
+<div><p>Notice that if one adopt states, this means that the entities are supposed to be <em>mutable</em>.</p>
+</div></blockquote>
+</section>
+<section id="polymorphisms">
+<h2>polymorphisms<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#polymorphisms" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#polymorphisms'"><span>#</span></a></h2>
+<p>The “universality” principle assumes that there constructions that can be applied to different contexts. If one think of constructions as “functions”, this means that certain functions can be used to different proposes. This is precisely the scope of <em>polymorphisms</em>.</p>
+<p>On the other hand, the “type safety” principle assumes that there are constructions that depends on the type of entities. But polymorphisms which depend on types are <em>parametric polymorphisms</em>.</p>
+<p>Thus:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">f-systems</span></code> typically deals with constructions that are implemented by parametric polymorphisms.</p>
+</div></blockquote>
+</section>
+<section id="metadata">
+<h2>metadata<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#metadata" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#metadata'"><span>#</span></a></h2>
+<p>In turn, the “distinguishability” principle tell us that entities could be easily distinguished, while “intelligibility” principle tell us that this should be made using human readable info.</p>
+<p>But the “distinguishable human readable” info of something is normally given by its <em>metadata</em>.</p>
+<p>Therefore:</p>
+<blockquote>
+<div><p>In <code class="docutils literal notranslate"><span class="pre">f-systems</span></code>, entities typically have metadata.</p>
+</div></blockquote>
+</section>
+<section id="dependencies">
+<h2>dependencies<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#dependencies" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#dependencies'"><span>#</span></a></h2>
+<p>Finally, the general “minimalism” principle tell us that one should avoid adding dependencies unless they are <strong>really</strong> needed.</p>
+</section>
 </section>
 </div><div class="flex justify-between items-center pt-6 mt-12 border-t border-border gap-4">
-</div></div>
+</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
+<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+<ul>
+<li><a :data-current="activeSection === '#f-systems'" class="reference internal" href="#f-systems">f-systems</a></li>
+<li><a :data-current="activeSection === '#principles'" class="reference internal" href="#principles">principles</a></li>
+<li><a :data-current="activeSection === '#state'" class="reference internal" href="#state">state</a></li>
+<li><a :data-current="activeSection === '#polymorphisms'" class="reference internal" href="#polymorphisms">polymorphisms</a></li>
+<li><a :data-current="activeSection === '#metadata'" class="reference internal" href="#metadata">metadata</a></li>
+<li><a :data-current="activeSection === '#dependencies'" class="reference internal" href="#dependencies">dependencies</a></li>
+</ul>
+</div>
+</aside>
 </main>
 </div>
 </div><footer class="py-6 border-t border-border md:py-0">
