@@ -1,38 +1,57 @@
 # systematics
 
-Our [philosophy](./philosophy) is realized through a _systematics_: a collection of practical and systematical steps to be used to build `f-systems`. In this documentation we describe some of the fundamental concepts that subsumes our systematics.
+Our [philosophy](./philosophy) is realized through a _systematics_: a collection of practical and systematical steps to be used to build `f-systems`. 
 
-## overview
+## review
 
-Recall that a `f-system` is a system that uses the `f` library. Every `f-system` have a `state`, which is defined by all information we have on the system in a given moment. These "information" are given by the entities that the system have access in that given moment, hence by their `accessible entities`. 
+Recall that :
+1. `f-systems` are composed by `entities` and by `constructions`
+2. entities have a `type`
+4. `f-systems` typically deals with _parametric polymorphisms_
+3. the entities normally have _metadata_.
 
-In a `f-system` we have four kinds of entities:
-1. `types`: are the types that can be passed to (or returned by) a function;
-2. `operations`: are functions that receive types and return another types, i.e., are ways to build new types from given ones;
-3. `spectra`: are the "generic functions", which implements parametric polymorphisms, hence that can be applied to different types;
-4. `dynamic spectra`: are the variations of spectra that deals with _variable_ generic functions, in the sense that they can have a variable number of objects.
+> In the following we will deal with "stateful `f-systems`", for with an entity have not only a `type`, but also a `state`.
 
-The flavored entities that are considered _accessible_ are stored in a corresponding `database` (which is just a dictionary), being then manipulated through `structural methods` (which are just CRUD operations). Thus, with these `structural methods` one controls the `state` of a `f-system`.
+## global state
+
+The `state` of an entity is defined by all information we have on the system in a given moment. If the entities have a state, also has the `f-system`: it is given by the entities that the system have access in that given moment.
+
+> These are the so-called _accessible entities_, which determines the _global state_ of the `f-system`.
+
+## database
+
+The entities should be created at some sort of "database", which stores the state of the entities and, therefore, which defines the "global state" of the `f-system`.
 
 ## structure
 
-The entities splits into two parts:
-1. metadata
-2. specialized data.
+If entities have "metadata", this means that they split into two parts:
+1. the metadata
+2. other _specialized data_.
 
-The metadata contains:
+The metadata should contains, for example:
 1. `description`: which briefly describes the entity
 2. `tags`: which classify the entity
 3. `comments`: which complement the entity
 
-The specialized data vary from the entity kinds, but, in essence, they define the "body" of the entity, which is the part of an entity which is used to construct other things.
+The specialized data may vary from the entity kind, but, in essence, they define the "body" of the entity, which is the part of an entity which is used to construct other things. 
+
+> The "state" of an entity is defined by its _metadata_ and by its _specialized data_.
 
 ## methods
 
-After creating a `f-system`, the first step is to _initialize_ a `database` for the specific kind of entity we will use. This is done through the method `database()`. One can then _initialize_ an entity in the database, which is done through the method `init()`, that creates an entity with a minimum of metadata and with an "empty body". 
+To modify the "state" of something we need certain CRUD operations. In our context, they could be viewed as _methods_:
+1. `database()`: creates some empty database. In other words, _initialize_ the global state 
+2. `init()`: creates (or _initialize_) an entity in some database with its _minimal state_
+3. `add()`: add some metadata, as a "tag" or a "comment"
+4. `delete()`: delete some metadata
+5. `extend()`: add something to the "body" of the entity 
+6. `update()`: change something in the metadata or in the body.
 
-In the sequence, one can _extend_ the "body" of an entity, or add some additional metadata to it. This is done via the methods `extend()` and `add()`, respectively. Some metadata can then be _deleted_ with the `delete()`. Finally, at some moment one can _update_ some data with `update()` method.
+On the other hand, recall the principle of "distinguishability". According to them, one should be able to have a simplified access to the information that distinguishes an entity from the other entities. In other words, one needs two new methods:
 
-## accessibility
+- `find()`: localizes an entity inside a database from some given information
+- `get()`: retrieves specific metadata or specialized data of an entity
 
-Recall that a principle of the `f-utils` is _accessibility_, which means that the entities of a `f-system` should be quickly accessed and must provide human readable info. This is implemented through additional methods `get()`, `search()` and `info()`. The first one allows us to get data from a given entity. The second one allows us to find a entity inside its database by providing some search string. Finally, the last one returns a human readable account of a provided entity.
+Finally, we also have the principle of "intelligibility", so that we also need another method:
+
+- `info()`: prints information of  an entity in a human readable way. 
