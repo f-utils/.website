@@ -11,8 +11,8 @@
 <meta content="systematics | f-utils" property="og:title"/>
 <meta content="systematics | f-utils" name="twitter:title"/>
 <link href="../_static/pygments.css?v=98401f0d" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=ea4c2b4f" rel="stylesheet" type="text/css"/>
-<link href="../_static/theme.css?v=ea4c2b4f" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=7b07dc54" rel="stylesheet" type="text/css"/>
+<link href="../_static/theme.css?v=7b07dc54" rel="stylesheet" type="text/css"/>
 <link href="../_static/logo.svg" rel="icon"/>
 <link href="../search.html" rel="search" title="Search"/>
 <link href="../genindex.html" rel="index" title="Index"/>
@@ -88,6 +88,7 @@
 <ul class="space-y-2 mt-2 ml-4 p-0">
 <li><a class="hover:underline" href="philosophy.html">philosophy</a></li>
 <li><a class="hover:underline" href="#">systematics</a></li>
+<li><a class="hover:underline" href="implementation.html">implementation</a></li>
 <li><a class="hover:underline" href="structure.html">structure</a></li>
 <li><a class="hover:underline" href="install.html">install</a></li>
 </ul>
@@ -127,52 +128,80 @@
 <div id="content" role="main">
 <section id="systematics">
 <h1>systematics<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#systematics"><span>#</span></a></h1>
-<p>Our <a class="reference internal" href="philosophy.html"><span class="doc std std-doc">philosophy</span></a> is realized through a <em>systematics</em>: a collection of practical and systematical steps to be used to build <code class="docutils literal notranslate"><span class="pre">f-systems</span></code>. In this documentation we describe some of the fundamental concepts that subsumes our systematics.</p>
-<section id="overview">
-<h2>overview<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#overview" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#overview'"><span>#</span></a></h2>
-<p>Recall that a <code class="docutils literal notranslate"><span class="pre">f-system</span></code> is a system that uses the <code class="docutils literal notranslate"><span class="pre">f</span></code> library. Every <code class="docutils literal notranslate"><span class="pre">f-system</span></code> have a <code class="docutils literal notranslate"><span class="pre">state</span></code>, which is defined by all information we have on the system in a given moment. These “information” are given by the entities that the system have access in that given moment, hence by their <code class="docutils literal notranslate"><span class="pre">accessible</span> <span class="pre">entities</span></code>.</p>
-<p>In a <code class="docutils literal notranslate"><span class="pre">f-system</span></code> we have four kinds of entities:</p>
+<p>Our <a class="reference internal" href="philosophy.html"><span class="doc std std-doc">philosophy</span></a> is realized through a <em>systematics</em>: a collection of practical and systematical steps to be used to build <code class="docutils literal notranslate"><span class="pre">f-systems</span></code>.</p>
+<section id="review">
+<h2>review<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#review" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#review'"><span>#</span></a></h2>
+<p>Recall that :</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">types</span></code>: are the types that can be passed to (or returned by) a function;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operations</span></code>: are functions that receive types and return another types, i.e., are ways to build new types from given ones;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">spectra</span></code>: are the “generic functions”, which implements parametric polymorphisms, hence that can be applied to different types;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dynamic</span> <span class="pre">spectra</span></code>: are the variations of spectra that deals with <em>variable</em> generic functions, in the sense that they can have a variable number of objects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f-systems</span></code> are composed by <code class="docutils literal notranslate"><span class="pre">entities</span></code> and by <code class="docutils literal notranslate"><span class="pre">constructions</span></code></p></li>
+<li><p>entities have a <code class="docutils literal notranslate"><span class="pre">type</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f-systems</span></code> typically deals with <em>parametric polymorphisms</em></p></li>
+<li><p>the entities normally have <em>metadata</em>.</p></li>
 </ol>
-<p>The flavored entities that are considered <em>accessible</em> are stored in a corresponding <code class="docutils literal notranslate"><span class="pre">database</span></code> (which is just a dictionary), being then manipulated through <code class="docutils literal notranslate"><span class="pre">structural</span> <span class="pre">methods</span></code> (which are just CRUD operations). Thus, with these <code class="docutils literal notranslate"><span class="pre">structural</span> <span class="pre">methods</span></code> one controls the <code class="docutils literal notranslate"><span class="pre">state</span></code> of a <code class="docutils literal notranslate"><span class="pre">f-system</span></code>.</p>
+<blockquote>
+<div><p>In the following we will deal with “stateful <code class="docutils literal notranslate"><span class="pre">f-systems</span></code>”, for with an entity have not only a <code class="docutils literal notranslate"><span class="pre">type</span></code>, but also a <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p>
+</div></blockquote>
+</section>
+<section id="global-state">
+<h2>global state<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#global-state" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#global-state'"><span>#</span></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">state</span></code> of an entity is defined by all information we have on the system in a given moment. If the entities have a state, also has the <code class="docutils literal notranslate"><span class="pre">f-system</span></code>: it is given by the entities that the system have access in that given moment.</p>
+<blockquote>
+<div><p>These are the so-called <em>accessible entities</em>, which determines the <em>global state</em> of the <code class="docutils literal notranslate"><span class="pre">f-system</span></code>.</p>
+</div></blockquote>
+</section>
+<section id="database">
+<h2>database<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#database" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#database'"><span>#</span></a></h2>
+<p>The entities should be created at some sort of “database”, which stores the state of the entities and, therefore, which defines the “global state” of the <code class="docutils literal notranslate"><span class="pre">f-system</span></code>.</p>
 </section>
 <section id="structure">
 <h2>structure<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#structure" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#structure'"><span>#</span></a></h2>
-<p>The entities splits into two parts:</p>
+<p>If entities have “metadata”, this means that they split into two parts:</p>
 <ol class="arabic simple">
-<li><p>metadata</p></li>
-<li><p>specialized data.</p></li>
+<li><p>the metadata</p></li>
+<li><p>other <em>specialized data</em>.</p></li>
 </ol>
-<p>The metadata contains:</p>
+<p>The metadata should contains, for example:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: which briefly describes the entity</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code>: which classify the entity</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">comments</span></code>: which complement the entity</p></li>
 </ol>
-<p>The specialized data vary from the entity kinds, but, in essence, they define the “body” of the entity, which is the part of an entity which is used to construct other things.</p>
+<p>The specialized data may vary from the entity kind, but, in essence, they define the “body” of the entity, which is the part of an entity which is used to construct other things.</p>
+<blockquote>
+<div><p>The “state” of an entity is defined by its <em>metadata</em> and by its <em>specialized data</em>.</p>
+</div></blockquote>
 </section>
 <section id="methods">
 <h2>methods<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#methods" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#methods'"><span>#</span></a></h2>
-<p>After creating a <code class="docutils literal notranslate"><span class="pre">f-system</span></code>, the first step is to <em>initialize</em> a <code class="docutils literal notranslate"><span class="pre">database</span></code> for the specific kind of entity we will use. This is done through the method <code class="docutils literal notranslate"><span class="pre">database()</span></code>. One can then <em>initialize</em> an entity in the database, which is done through the method <code class="docutils literal notranslate"><span class="pre">init()</span></code>, that creates an entity with a minimum of metadata and with an “empty body”.</p>
-<p>In the sequence, one can <em>extend</em> the “body” of an entity, or add some additional metadata to it. This is done via the methods <code class="docutils literal notranslate"><span class="pre">extend()</span></code> and <code class="docutils literal notranslate"><span class="pre">add()</span></code>, respectively. Some metadata can then be <em>deleted</em> with the <code class="docutils literal notranslate"><span class="pre">delete()</span></code>. Finally, at some moment one can <em>update</em> some data with <code class="docutils literal notranslate"><span class="pre">update()</span></code> method.</p>
-</section>
-<section id="accessibility">
-<h2>accessibility<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#accessibility" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#accessibility'"><span>#</span></a></h2>
-<p>Recall that a principle of the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> is <em>accessibility</em>, which means that the entities of a <code class="docutils literal notranslate"><span class="pre">f-system</span></code> should be quickly accessed and must provide human readable info. This is implemented through additional methods <code class="docutils literal notranslate"><span class="pre">get()</span></code>, <code class="docutils literal notranslate"><span class="pre">search()</span></code> and <code class="docutils literal notranslate"><span class="pre">info()</span></code>. The first one allows us to get data from a given entity. The second one allows us to find a entity inside its database by providing some search string. Finally, the last one returns a human readable account of a provided entity.</p>
+<p>To modify the “state” of something we need certain CRUD operations. In our context, they could be viewed as <em>methods</em>:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">database()</span></code>: creates some empty database. In other words, <em>initialize</em> the global state</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">init()</span></code>: creates (or <em>initialize</em>) an entity in some database with its <em>minimal state</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add()</span></code>: add some metadata, as a “tag” or a “comment”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete()</span></code>: delete some metadata</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extend()</span></code>: add something to the “body” of the entity</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update()</span></code>: change something in the metadata or in the body.</p></li>
+</ol>
+<p>On the other hand, recall the principle of “distinguishability”. According to them, one should be able to have a simplified access to the information that distinguishes an entity from the other entities. In other words, one needs two new methods:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">find()</span></code>: localizes an entity inside a database from some given information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get()</span></code>: retrieves specific metadata or specialized data of an entity</p></li>
+</ul>
+<p>Finally, we also have the principle of “intelligibility”, so that we also need another method:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">info()</span></code>: prints information of  an entity in a human readable way.</p></li>
+</ul>
 </section>
 </section>
 </div><div class="flex justify-between items-center pt-6 mt-12 border-t border-border gap-4">
 </div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
 <div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
 <ul>
-<li><a :data-current="activeSection === '#overview'" class="reference internal" href="#overview">overview</a></li>
+<li><a :data-current="activeSection === '#review'" class="reference internal" href="#review">review</a></li>
+<li><a :data-current="activeSection === '#global-state'" class="reference internal" href="#global-state">global state</a></li>
+<li><a :data-current="activeSection === '#database'" class="reference internal" href="#database">database</a></li>
 <li><a :data-current="activeSection === '#structure'" class="reference internal" href="#structure">structure</a></li>
 <li><a :data-current="activeSection === '#methods'" class="reference internal" href="#methods">methods</a></li>
-<li><a :data-current="activeSection === '#accessibility'" class="reference internal" href="#accessibility">accessibility</a></li>
 </ul>
 </div>
 </aside>
