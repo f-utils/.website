@@ -559,7 +559,7 @@ video {
 
 #content ul:not(.search) p,
 #content ul:not(.search)>li {
-    margin-top: 1.5rem
+    margin-top: 0.5rem
 }
 
 #content ul:not(.search) ul {

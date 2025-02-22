@@ -7,9 +7,9 @@
 <meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
 <meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>structure | f-utils</title>
-<meta content="structure | f-utils" property="og:title"/>
-<meta content="structure | f-utils" name="twitter:title"/>
+<title>implementation | f-utils</title>
+<meta content="implementation | f-utils" property="og:title"/>
+<meta content="implementation | f-utils" name="twitter:title"/>
 <link href="../_static/pygments.css?v=98401f0d" rel="stylesheet" type="text/css"/>
 <link href="../_static/theme.css?v=7b07dc54" rel="stylesheet" type="text/css"/>
 <link href="../_static/theme.css?v=7b07dc54" rel="stylesheet" type="text/css"/>
@@ -88,8 +88,8 @@
 <ul class="space-y-2 mt-2 ml-4 p-0">
 <li><a class="hover:underline" href="philosophy.html">philosophy</a></li>
 <li><a class="hover:underline" href="systematics.html">systematics</a></li>
-<li><a class="hover:underline" href="implementation.html">implementation</a></li>
-<li><a class="hover:underline" href="#">structure</a></li>
+<li><a class="hover:underline" href="#">implementation</a></li>
+<li><a class="hover:underline" href="structure.html">structure</a></li>
 <li><a class="hover:underline" href="install.html">install</a></li>
 </ul>
 <li class="font-bold" style="margin-top: 35px;">libs</li>
@@ -123,86 +123,95 @@
 <path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
 </svg>
 </a>
-<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">structure</span>
+<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">implementation</span>
 </nav>
 <div id="content" role="main">
-<section id="structure">
-<h1>structure<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#structure"><span>#</span></a></h1>
-<p>In this documentation we talk about the <em>structure</em> of the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> project.</p>
-<section id="libs">
-<h2>libs<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#libs" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#libs'"><span>#</span></a></h2>
-<p>The framework provided by <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> consists of a collection of libs, organized into three main categories:</p>
+<section id="implementation">
+<h1>implementation<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#implementation"><span>#</span></a></h1>
+<p>In this documentation we discuss how one implements our <a class="reference internal" href="systematics.html"><span class="doc std std-doc">systematics</span></a> in the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> framework.</p>
+<section id="entities">
+<h2>entities<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#entities" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#entities'"><span>#</span></a></h2>
+<p>In <code class="docutils literal notranslate"><span class="pre">f-utils</span></code>, we will deal with <code class="docutils literal notranslate"><span class="pre">f-system</span></code> that have four kinds of entities:</p>
 <ol class="arabic simple">
-<li><p><strong>primitive</strong>: these are the generic and context free libs, in which the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> concepts and systematics are implemented, and their main concrete examples are constructed;</p></li>
-<li><p><strong>primary</strong>: the context based libs, which are built by making use of the primitive libs;</p></li>
-<li><p><strong>secondary</strong>:  the derivated and more involved libs, constructed from multiple primary libs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">types</span></code>: are the types that can be passed to (or returned by) a function;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operations</span></code>: are functions that receive types and return another types, i.e., are ways to build new types from given ones;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spectra</span></code>: are the “generic functions”, which implements parametric polymorphisms, hence that can be applied to different types;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dynamic</span> <span class="pre">spectra</span></code>: are the variations of spectra that deals with <em>variable</em> generic functions, in the sense that they can have a variable number of objects.</p></li>
 </ol>
 </section>
-<section id="repository">
-<h2>repository<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#repository" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#repository'"><span>#</span></a></h2>
-<p>Independently of the category, all libs are given by a repository in the Github organization <a class="reference external" href="https://github.com/f-utils">f-utils</a> under the name <code class="docutils literal notranslate"><span class="pre">f-{lib}</span></code>. The only exception is <code class="docutils literal notranslate"><span class="pre">f</span></code>, which has no suffix. It is a primitive lib and the principal one, being used in each other lib.</p>
-</section>
-<section id="primitive">
-<h2>primitive<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#primitive" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#primitive'"><span>#</span></a></h2>
-<p>We have three <em>primitive</em> libs:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">f</span></code>: the main library, implementing the systematics</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">f-core</span></code>: constructing concrete examples of the concepts</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">f-mon</span></code>: building useful monads, so that allowing a more functional approach</p></li>
-</ol>
-<p>Each primitive lib provides certain <em>fundamental classes</em>, which are always represented by a single lowercase letter, as follows.</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="gh">lib        class     scope</span>
-</span><span id="line-2"><span class="gh">-------------------------------------------------</span>
-</span><span id="line-3"><span class="gh">f          f         systematics implementation</span>
-</span><span id="line-4"><span class="gh">.................................................</span>
-</span><span id="line-5">f-core     t         fundamental types
-</span><span id="line-6">f-core     o         main type operations
-</span><span id="line-7">f-core     s         basic spetra examples
-</span><span id="line-8"><span class="gh">f-core     g         principal global tests</span>
-</span><span id="line-9"><span class="gh">..................................................</span>
-</span><span id="line-10">f-mon      m         useful monads
+<section id="classes">
+<h2>classes<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#classes" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#classes'"><span>#</span></a></h2>
+<p>Each kind of entity is an object of a class, which comes endowed with an alias:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span id="line-1">class      alias     entities        
+</span><span id="line-2">--------------------------------------    
+</span><span id="line-3">Types      t         types
+</span><span id="line-4">Ops        o         operations
+</span><span id="line-5">Spec       s         spectra
+</span><span id="line-6">DSpec      ds        dynamic spectra
 </span></code></pre></div>
 </div>
 </section>
-<section id="primary">
-<h2>primary<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#primary" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#primary'"><span>#</span></a></h2>
-<p>We have many <em>primary</em> libs, each of them covering a small context. Their suffix in <code class="docutils literal notranslate"><span class="pre">f-{lib}</span></code> are determined precisely by their context:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="gh">lib        context</span>
-</span><span id="line-2"><span class="gh">---------------------------</span>
-</span><span id="line-3">f-ansi     ansi code
-</span><span id="line-4">f-log      logging systems
-</span><span id="line-5">f-path     filepaths
-</span><span id="line-6">f-re       regex and patterns
-</span><span id="line-7">f-json     json data
-</span><span id="line-8"><span class="c">...        ...</span>
+<section id="methods">
+<h2>methods<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#methods" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#methods'"><span>#</span></a></h2>
+<p>The structural operations on the entities are implemented as <em>methods</em> in the corresponding classes.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="gh">method                 meaning</span>
+</span><span id="line-2"><span class="gh">-------------------------------------------------------------------------------------</span>
+</span><span id="line-3">Types.database()       initialize a Types database
+</span><span id="line-4">Ops.init()             initialize an operation in some Ops database
+</span><span id="line-5">Spec.add()             add some metadata to some spectra in some Spec database
+</span><span id="line-6">DSpec.update()         update some info of some dynamic spectra in some DSpec database
 </span></code></pre></div>
 </div>
-<p>These libraries provide a single <em>global class</em> that corresponds and are named according to the underlying context. The classes also come endowed with an alias: a single uppercase letter - the first letter of the class name.</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="gh">lib        context              class     alias</span>
-</span><span id="line-2"><span class="gh">----------------------------------------------</span>
-</span><span id="line-3">f-ansi     ansi code            Ansi      A
-</span><span id="line-4">f-log      logging systems      Log       L
-</span><span id="line-5">f-path     filepaths            Path      P
-</span><span id="line-6">f-re       regex and patterns   Re        R
-</span><span id="line-7">f-json     json data            Json      J
-</span><span id="line-8"><span class="c">...        ...                  ...       ...</span>
-</span></code></pre></div>
-</div>
-<p>Each primary lib also comes with a subclass <code class="docutils literal notranslate"><span class="pre">{Lib}.Err</span></code>, where the custom error classes are defined.</p>
 </section>
-<section id="secondary">
-<h2>secondary<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#secondary" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#secondary'"><span>#</span></a></h2>
+<section id="state">
+<h2>state<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#state" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#state'"><span>#</span></a></h2>
+<p>The state of an entity is given by a <em>dictionary entry</em>, which contains the metadata part and a specialized data part.</p>
+<p>For example, for operations in <code class="docutils literal notranslate"><span class="pre">Ops</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="n">some_ops</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="line-2">    <span class="n">metadata</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="line-3">        <span class="n">desc</span><span class="p">:</span> <span class="s2">"some description"</span><span class="p">,</span>
+</span><span id="line-4">        <span class="n">tags</span><span class="p">:</span> <span class="p">[</span><span class="s2">"tag1"</span><span class="p">,</span> <span class="s2">"tag2"</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span>
+</span><span id="line-5">        <span class="n">comments</span><span class="p">:</span> <span class="p">[</span><span class="s2">"comment 1"</span><span class="p">,</span> <span class="s2">"comment 2"</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</span><span id="line-6">    <span class="p">},</span>
+</span><span id="line-7">    <span class="n">op</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="line-8">        <span class="n">func</span><span class="p">:</span> <span class="n">some_function</span><span class="p">,</span>
+</span><span id="line-9">        <span class="nb">repr</span><span class="p">:</span> <span class="n">human_readable_reprentation_of_some_function</span>
+</span><span id="line-10">    <span class="p">}</span>
+</span><span id="line-11"><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</section>
+<section id="database">
+<h2>database<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#database" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#database'"><span>#</span></a></h2>
+<p>Our databases are just class-level dictionaries containing the states (i.e, the dictionary entries) of the entities.</p>
+<p>For example, for <code class="docutils literal notranslate"><span class="pre">Ops</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="n">some_Ops_dict</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="line-2">    <span class="n">some_ops</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="line-3">        <span class="n">metadata</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="line-4">            <span class="n">desc</span><span class="p">:</span> <span class="s2">"some description"</span><span class="p">,</span>
+</span><span id="line-5">            <span class="n">tags</span><span class="p">:</span> <span class="p">[</span><span class="s2">"tag1"</span><span class="p">,</span> <span class="s2">"tag2"</span><span class="p">,</span> <span class="o">...</span><span class="p">],</span>
+</span><span id="line-6">            <span class="n">comments</span><span class="p">:</span> <span class="p">[</span><span class="s2">"comment 1"</span><span class="p">,</span> <span class="s2">"comment 2"</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</span><span id="line-7">        <span class="p">},</span>
+</span><span id="line-8">        <span class="n">op</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="line-9">            <span class="n">func</span><span class="p">:</span> <span class="n">some_function</span><span class="p">,</span>
+</span><span id="line-10">            <span class="nb">repr</span><span class="p">:</span> <span class="n">human_readable_reprentation_of_some_function</span>
+</span><span id="line-11">        <span class="p">}</span>
+</span><span id="line-12">    <span class="p">},</span>
+</span><span id="line-13">    <span class="o">...</span>
+</span><span id="line-14"><span class="p">}</span>
+</span></code></pre></div>
+</div>
 </section>
 </section>
 </div><div class="flex justify-between items-center pt-6 mt-12 border-t border-border gap-4">
 </div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
 <div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
 <ul>
-<li><a :data-current="activeSection === '#libs'" class="reference internal" href="#libs">libs</a></li>
-<li><a :data-current="activeSection === '#repository'" class="reference internal" href="#repository">repository</a></li>
-<li><a :data-current="activeSection === '#primitive'" class="reference internal" href="#primitive">primitive</a></li>
-<li><a :data-current="activeSection === '#primary'" class="reference internal" href="#primary">primary</a></li>
-<li><a :data-current="activeSection === '#secondary'" class="reference internal" href="#secondary">secondary</a></li>
+<li><a :data-current="activeSection === '#entities'" class="reference internal" href="#entities">entities</a></li>
+<li><a :data-current="activeSection === '#classes'" class="reference internal" href="#classes">classes</a></li>
+<li><a :data-current="activeSection === '#methods'" class="reference internal" href="#methods">methods</a></li>
+<li><a :data-current="activeSection === '#state'" class="reference internal" href="#state">state</a></li>
+<li><a :data-current="activeSection === '#database'" class="reference internal" href="#database">database</a></li>
 </ul>
 </div>
 </aside>
