@@ -38,6 +38,7 @@
 <img alt="Logo" class="mr-2 dark:invert" height="24" src="../_static/logo.svg" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">f-utils</span>
 </a><nav class="flex items-center space-x-6 text-sm font-medium">
 <a class="transition-colors hover:text-foreground/80 text-foreground/60" href="../index.html">home</a>
+<a class="transition-colors hover:text-foreground/80 text-foreground/60" href="../libs.html">libs</a>
 <a class="transition-colors hover:text-foreground/80 text-foreground/60" href="../changelog.html">changelog</a>
 </nav></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
 <svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -86,23 +87,26 @@
 <ul class="mt-6 space-y-6 text-left p-0">
 <li class="font-bold" style="margin-top: 35px;">docs</li>
 <ul class="space-y-2 mt-2 ml-4 p-0">
+<li><a class="hover:underline" href="about.html">about</a></li>
 <li><a class="hover:underline" href="philosophy.html">philosophy</a></li>
 <li><a class="hover:underline" href="systematics.html">systematics</a></li>
 <li><a class="hover:underline" href="implementation.html">implementation</a></li>
 <li><a class="hover:underline" href="#">structure</a></li>
-<li><a class="hover:underline" href="install.html">install</a></li>
 </ul>
 <li class="font-bold" style="margin-top: 35px;">libs</li>
 <ul class="space-y-2 mt-2 ml-4 p-0">
-<li><a class="hover:underline" href="../libs/primitive/index.html">primitive</a></li>
-<li><a class="hover:underline" href="../libs/primary/index.html">primary</a></li>
-<li><a class="hover:underline" href="../libs/other/index.html">other</a></li>
+<li><a class="hover:underline" href="libs/primitive.html">primitive</a></li>
+<li><a class="hover:underline" href="libs/primary.html">primary</a></li>
+<li><a class="hover:underline" href="libs/secondary.html">secondary</a></li>
+<li><a class="hover:underline" href="libs/other.html">other</a></li>
+<li><a class="hover:underline" href="libs/install.html">install</a></li>
 </ul>
 </ul>
 </nav>
 <div class="relative overflow-hidden md:overflow-auto my-4 md:my-0">
 <div class="overflow-y-auto h-full w-full relative pr-6"><nav class="flex md:hidden flex-col font-medium mt-4">
 <a href="../index.html">home</a>
+<a href="../libs.html">libs</a>
 <a href="../changelog.html">changelog</a>
 </nav><nav class="table w-full min-w-full my-6 lg:my-8">
 </nav>
@@ -128,70 +132,30 @@
 <div id="content" role="main">
 <section id="structure">
 <h1>structure<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#structure"><span>#</span></a></h1>
-<p>In this documentation we talk about the <em>structure</em> of the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> project.</p>
+<p>In this documentation we talk about the structure of the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> project, i.e, how it is organized.</p>
 <section id="libs">
 <h2>libs<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#libs" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#libs'"><span>#</span></a></h2>
-<p>The framework provided by <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> consists of a collection of libs, organized into three main categories:</p>
+<p>The framework provided by <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> consists of a collection of libs, organized into four main categories:</p>
 <ol class="arabic simple">
-<li><p><strong>primitive</strong>: these are the generic and context free libs, in which the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> concepts and systematics are implemented, and their main concrete examples are constructed;</p></li>
-<li><p><strong>primary</strong>: the context based libs, which are built by making use of the primitive libs;</p></li>
-<li><p><strong>secondary</strong>:  the derivated and more involved libs, constructed from multiple primary libs.</p></li>
+<li><p><a class="reference internal" href="libs/primitive.html"><span class="doc std std-doc">primitive</span></a>: these are the generic and context free libs, in which the <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> concepts and <a class="reference internal" href="systematics.html"><span class="doc std std-doc">systematics</span></a> are <a class="reference internal" href="implementation.html"><span class="doc std std-doc">implemented</span></a>, and in which their main concrete examples are constructed</p></li>
+<li><p><a class="reference internal" href="libs/primary.html"><span class="doc std std-doc">primary</span></a>: the context-based libs, which are built by making use of the primitive libs. These libs provides our main utilities</p></li>
+<li><p><a class="reference internal" href="#libs/secondary"><span class="xref myst">secondary</span></a>:  the derived and more involved libs, constructed from multiple primary libs</p></li>
+<li><p><a class="reference internal" href="#libs/other"><span class="xref myst">other</span></a>:  additional minor libraries</p></li>
 </ol>
 </section>
 <section id="repository">
 <h2>repository<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#repository" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#repository'"><span>#</span></a></h2>
-<p>Independently of the category, all libs are given by a repository in the Github organization <a class="reference external" href="https://github.com/f-utils">f-utils</a> under the name <code class="docutils literal notranslate"><span class="pre">f-{lib}</span></code>. The only exception is <code class="docutils literal notranslate"><span class="pre">f</span></code>, which has no suffix. It is a primitive lib and the principal one, being used in each other lib.</p>
+<p>Independently of the category, all libs are given by a repository in the Github organization <a class="reference external" href="https://github.com/f-utils">f-utils</a> under the name <code class="docutils literal notranslate"><span class="pre">f-{lib}</span></code>. The only exception is <code class="docutils literal notranslate"><span class="pre">f</span></code>, which has no suffix. It is a primitive lib and the principal one, being used in each other lib. It is in it that our <a class="reference internal" href="systematics.html"><span class="doc std std-doc">systematics</span></a> is implemented.</p>
 </section>
-<section id="primitive">
-<h2>primitive<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#primitive" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#primitive'"><span>#</span></a></h2>
-<p>We have three <em>primitive</em> libs:</p>
+<section id="dot-repos">
+<h2>dot repos<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#dot-repos" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#dot-repos'"><span>#</span></a></h2>
+<p>The <a class="reference external" href="https://github.com/f-utils">f-utils</a> organization also has another kind of repositories: the <strong>dot</strong> repos. As suggested, they are named under <code class="docutils literal notranslate"><span class="pre">.{name}</span></code> and have a non-lib context:</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">f</span></code>: the main library, implementing the systematics</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">f-core</span></code>: constructing concrete examples of the concepts</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">f-mon</span></code>: building useful monads, so that allowing a more functional approach</p></li>
+<li><p><a class="reference external" href="https://github.com/f-utils/.github">.github</a>: organization configuration files</p></li>
+<li><p><a class="reference external" href="https://github.com/f-utils/.issues">.issues</a>: issues of all libs</p></li>
+<li><p><a class="reference external" href="https://github.com/f-utils/.website">.website</a>: files of our website</p></li>
+<li><p><a class="reference external" href="https://github.com/f-utils/.template">.template</a>: template directory to build libs</p></li>
 </ol>
-<p>Each primitive lib provides certain <em>fundamental classes</em>, which are always represented by a single lowercase letter, as follows.</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="gh">lib        class     scope</span>
-</span><span id="line-2"><span class="gh">-------------------------------------------------</span>
-</span><span id="line-3"><span class="gh">f          f         systematics implementation</span>
-</span><span id="line-4"><span class="gh">.................................................</span>
-</span><span id="line-5">f-core     t         fundamental types
-</span><span id="line-6">f-core     o         main type operations
-</span><span id="line-7">f-core     s         basic spetra examples
-</span><span id="line-8"><span class="gh">f-core     g         principal global tests</span>
-</span><span id="line-9"><span class="gh">..................................................</span>
-</span><span id="line-10">f-mon      m         useful monads
-</span></code></pre></div>
-</div>
-</section>
-<section id="primary">
-<h2>primary<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#primary" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#primary'"><span>#</span></a></h2>
-<p>We have many <em>primary</em> libs, each of them covering a small context. Their suffix in <code class="docutils literal notranslate"><span class="pre">f-{lib}</span></code> are determined precisely by their context:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="gh">lib        context</span>
-</span><span id="line-2"><span class="gh">---------------------------</span>
-</span><span id="line-3">f-ansi     ansi code
-</span><span id="line-4">f-log      logging systems
-</span><span id="line-5">f-path     filepaths
-</span><span id="line-6">f-re       regex and patterns
-</span><span id="line-7">f-json     json data
-</span><span id="line-8"><span class="c">...        ...</span>
-</span></code></pre></div>
-</div>
-<p>These libraries provide a single <em>global class</em> that corresponds and are named according to the underlying context. The classes also come endowed with an alias: a single uppercase letter - the first letter of the class name.</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="gh">lib        context              class     alias</span>
-</span><span id="line-2"><span class="gh">----------------------------------------------</span>
-</span><span id="line-3">f-ansi     ansi code            Ansi      A
-</span><span id="line-4">f-log      logging systems      Log       L
-</span><span id="line-5">f-path     filepaths            Path      P
-</span><span id="line-6">f-re       regex and patterns   Re        R
-</span><span id="line-7">f-json     json data            Json      J
-</span><span id="line-8"><span class="c">...        ...                  ...       ...</span>
-</span></code></pre></div>
-</div>
-<p>Each primary lib also comes with a subclass <code class="docutils literal notranslate"><span class="pre">{Lib}.Err</span></code>, where the custom error classes are defined.</p>
-</section>
-<section id="secondary">
-<h2>secondary<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#secondary" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#secondary'"><span>#</span></a></h2>
 </section>
 </section>
 </div><div class="flex justify-between items-center pt-6 mt-12 border-t border-border gap-4">
@@ -200,9 +164,7 @@
 <ul>
 <li><a :data-current="activeSection === '#libs'" class="reference internal" href="#libs">libs</a></li>
 <li><a :data-current="activeSection === '#repository'" class="reference internal" href="#repository">repository</a></li>
-<li><a :data-current="activeSection === '#primitive'" class="reference internal" href="#primitive">primitive</a></li>
-<li><a :data-current="activeSection === '#primary'" class="reference internal" href="#primary">primary</a></li>
-<li><a :data-current="activeSection === '#secondary'" class="reference internal" href="#secondary">secondary</a></li>
+<li><a :data-current="activeSection === '#dot-repos'" class="reference internal" href="#dot-repos">dot repos</a></li>
 </ul>
 </div>
 </aside>

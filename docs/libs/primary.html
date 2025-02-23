@@ -7,9 +7,9 @@
 <meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
 <meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>f-ansi | f-utils</title>
-<meta content="f-ansi | f-utils" property="og:title"/>
-<meta content="f-ansi | f-utils" name="twitter:title"/>
+<title>primary libs | f-utils</title>
+<meta content="primary libs | f-utils" property="og:title"/>
+<meta content="primary libs | f-utils" name="twitter:title"/>
 <link href="../../_static/pygments.css?v=98401f0d" rel="stylesheet" type="text/css"/>
 <link href="../../_static/theme.css?v=7b07dc54" rel="stylesheet" type="text/css"/>
 <link href="../../_static/theme.css?v=7b07dc54" rel="stylesheet" type="text/css"/>
@@ -38,6 +38,7 @@
 <img alt="Logo" class="mr-2 dark:invert" height="24" src="../../_static/logo.svg" width="24"/><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">f-utils</span>
 </a><nav class="flex items-center space-x-6 text-sm font-medium">
 <a class="transition-colors hover:text-foreground/80 text-foreground/60" href="../../index.html">home</a>
+<a class="transition-colors hover:text-foreground/80 text-foreground/60" href="../../libs.html">libs</a>
 <a class="transition-colors hover:text-foreground/80 text-foreground/60" href="../../changelog.html">changelog</a>
 </nav></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
 <svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -86,23 +87,26 @@
 <ul class="mt-6 space-y-6 text-left p-0">
 <li class="font-bold" style="margin-top: 35px;">docs</li>
 <ul class="space-y-2 mt-2 ml-4 p-0">
-<li><a class="hover:underline" href="../../docs/philosophy.html">philosophy</a></li>
-<li><a class="hover:underline" href="../../docs/systematics.html">systematics</a></li>
-<li><a class="hover:underline" href="../../docs/implementation.html">implementation</a></li>
-<li><a class="hover:underline" href="../../docs/structure.html">structure</a></li>
-<li><a class="hover:underline" href="../../docs/install.html">install</a></li>
+<li><a class="hover:underline" href="../about.html">about</a></li>
+<li><a class="hover:underline" href="../philosophy.html">philosophy</a></li>
+<li><a class="hover:underline" href="../systematics.html">systematics</a></li>
+<li><a class="hover:underline" href="../implementation.html">implementation</a></li>
+<li><a class="hover:underline" href="../structure.html">structure</a></li>
 </ul>
 <li class="font-bold" style="margin-top: 35px;">libs</li>
 <ul class="space-y-2 mt-2 ml-4 p-0">
-<li><a class="hover:underline" href="../primitive/index.html">primitive</a></li>
-<li><a class="hover:underline" href="index.html">primary</a></li>
-<li><a class="hover:underline" href="../other/index.html">other</a></li>
+<li><a class="hover:underline" href="primitive.html">primitive</a></li>
+<li><a class="hover:underline" href="#">primary</a></li>
+<li><a class="hover:underline" href="secondary.html">secondary</a></li>
+<li><a class="hover:underline" href="other.html">other</a></li>
+<li><a class="hover:underline" href="install.html">install</a></li>
 </ul>
 </ul>
 </nav>
 <div class="relative overflow-hidden md:overflow-auto my-4 md:my-0">
 <div class="overflow-y-auto h-full w-full relative pr-6"><nav class="flex md:hidden flex-col font-medium mt-4">
 <a href="../../index.html">home</a>
+<a href="../../libs.html">libs</a>
 <a href="../../changelog.html">changelog</a>
 </nav><nav class="table w-full min-w-full my-6 lg:my-8">
 </nav>
@@ -123,14 +127,54 @@
 <path d="M240 856h120V616h240v240h120V496L480 316 240 496v360Zm-80 80V456l320-240 320 240v480H520V696h-80v240H160Zm320-350Z"></path>
 </svg>
 </a>
-<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">f-ansi</span>
+<div class="mr-1">/</div><span aria-current="page" class="font-medium text-foreground overflow-hidden text-ellipsis whitespace-nowrap">primary libs</span>
 </nav>
 <div id="content" role="main">
-<section id="f-ansi">
-<h1>f-ansi<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#f-ansi"><span>#</span></a></h1>
+<section id="primary-libs">
+<h1>primary libs<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#primary-libs"><span>#</span></a></h1>
+<p>In this documentation we introduce the <strong>primary</strong> libs of <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> framework.</p>
+<section id="description">
+<h2>description<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#description" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#description'"><span>#</span></a></h2>
+<p>The primary libs are the context-based <code class="docutils literal notranslate"><span class="pre">f-utils</span></code> libraries, which are built directly from the <a class="reference internal" href="primitive.html"><span class="doc std std-doc">primitive</span></a> libs. They construct the main utilities implemented in <code class="docutils literal notranslate"><span class="pre">f-utils</span></code>.</p>
+</section>
+<section id="libs">
+<h2>libs<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#libs" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#libs'"><span>#</span></a></h2>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../../libs/f-ansi.html"><span class="doc std std-doc">f-ansi</span></a>: deals with ANSI code</p></li>
+<li><p><a class="reference internal" href="#../../f-log"><span class="xref myst">f-log</span></a>: deals with logging systems</p></li>
+<li><p><a class="reference internal" href="#../../f-path"><span class="xref myst">f-path</span></a>: deals with filepaths</p></li>
+<li><p><a class="reference internal" href="#../../f-re"><span class="xref myst">f-re</span></a>: deals with regex</p></li>
+<li><p><a class="reference internal" href="#../../f-json"><span class="xref myst">f-json</span></a>: deals with json</p></li>
+<li><p><a class="reference internal" href="#../../f-os"><span class="xref myst">f-os</span></a>: deals with operating system level stuff</p></li>
+<li><p><a class="reference internal" href="#../../f-cli"><span class="xref myst">f-cli</span></a>: deals with the construction of command line interfaces</p></li>
+</ol>
+</section>
+<section id="classes">
+<h2>classes<a @click.prevent="window.navigator.clipboard.writeText($el.href); $el.setAttribute('data-tooltip', 'Copied!'); setTimeout(() =&gt; $el.setAttribute('data-tooltip', 'Copy link to this element'), 2000)" aria-label="Copy link to this element" class="headerlink" data-tooltip="Copy link to this element" href="#classes" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#classes'"><span>#</span></a></h2>
+<p>Each primary lib provides a single <strong>global class</strong> that corresponds and ais named according to the underlying lib context. The classes also come endowed with an alias: a single uppercase letter - typically the first letter of the class name.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><code><span id="line-1"><span class="gh">lib        context              class     alias</span>
+</span><span id="line-2"><span class="gh">----------------------------------------------</span>
+</span><span id="line-3">f-ansi     ansi code            Ansi      A
+</span><span id="line-4">f-log      logging systems      Log       L
+</span><span id="line-5">f-path     filepaths            Path      P
+</span><span id="line-6">f-re       regex and patterns   Re        R
+</span><span id="line-7">f-json     json data            Json      J
+</span><span id="line-8"><span class="c">...        ...                  ...       ...</span>
+</span></code></pre></div>
+</div>
+<p>Each of them lib also comes with a subclass <code class="docutils literal notranslate"><span class="pre">{Lib}.Err</span></code>, where the custom error classes are defined.</p>
+</section>
 </section>
 </div><div class="flex justify-between items-center pt-6 mt-12 border-t border-border gap-4">
-</div></div>
+</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
+<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+<ul>
+<li><a :data-current="activeSection === '#description'" class="reference internal" href="#description">description</a></li>
+<li><a :data-current="activeSection === '#libs'" class="reference internal" href="#libs">libs</a></li>
+<li><a :data-current="activeSection === '#classes'" class="reference internal" href="#classes">classes</a></li>
+</ul>
+</div>
+</aside>
 </main>
 </div>
 </div><footer class="py-6 border-t border-border md:py-0">
