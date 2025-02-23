@@ -6,10 +6,10 @@ In this documentation we talk about the structure of the `f-utils` project, i.e,
 
 The framework provided by `f-utils` consists of a collection of libs, organized into four main categories:
 
-1. [primitive](../libs/primitive): these are the generic and context free libs, in which the `f-utils` concepts and [systematics](systematics) are [implemented](implementation), and in which their main concrete examples are constructed
-2. [primary](../libs/primary): the context-based libs, which are built by making use of the primitive libs. These libs provides our main utilities
-3. [secondary](../libs/secondary):  the derived and more involved libs, constructed from multiple primary libs
-4. [other](../libs/other):  additional minor libraries
+1. [primitive](libs/primitive): these are the generic and context free libs, in which the `f-utils` concepts and [systematics](systematics) are [implemented](implementation), and in which their main concrete examples are constructed
+2. [primary](libs/primary): the context-based libs, which are built by making use of the primitive libs. These libs provides our main utilities
+3. [secondary](libs/secondary):  the derived and more involved libs, constructed from multiple primary libs
+4. [other](libs/other):  additional minor libraries
 
 ## repository
 

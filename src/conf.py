@@ -37,19 +37,21 @@ html_context = {
         'docs': {
             'title': 'docs',
             'links': [
+                {'name': 'about', 'url': 'docs/about'},
                 {'name': 'philosophy', 'url': 'docs/philosophy'},
                 {'name': 'systematics', 'url': 'docs/systematics'},
                 {'name': 'implementation', 'url': 'docs/implementation'},
-                {'name': 'structure', 'url': 'docs/structure'},
-                {'name': 'install', 'url': 'docs/install'}
+                {'name': 'structure', 'url': 'docs/structure'}
             ]
         },
         'libs': {
             'title': 'libs',
             'links': [
-                {'name': 'primitive', 'url': 'libs/primitive/index'},
-                {'name': 'primary', 'url': 'libs/primary/index'},
-                {'name': 'other', 'url': 'libs/other/index'}
+                {'name': 'primitive', 'url': 'docs/libs/primitive'},
+                {'name': 'primary', 'url': 'docs/libs/primary'},
+                {'name': 'secondary', 'url': 'docs/libs/secondary'},
+                {'name': 'other', 'url': 'docs/libs/other'},
+                {'name': 'install', 'url': 'docs/libs/install'}
             ]
         }
     }
@@ -72,6 +74,7 @@ theme_options = ThemeOptions(
     },
     main_nav_links={
         "home": "index",
+        "libs": "libs",
         "changelog": "changelog"
     },
     awesome_headerlinks=True,
